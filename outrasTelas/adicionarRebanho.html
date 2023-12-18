@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Rebanho</title>
+    <style>
+        @media screen and (max-width: 768px) {
+       
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+            font-size: 2rem;
+        }
+
+
+    input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 5px;
+    appearance: none;
+    border: 2px solid #020000; 
+    border-radius: 4px; 
+    width: 20px; 
+    height: 20px; 
+    outline: none; 
+    cursor: pointer; 
+}
+
+
+input[type="checkbox"]:checked {
+    background-color: #16cf10;
+    border-color: #4CAF50; 
+}
+
+
+input[type="checkbox"]:hover {
+    border-color: #00e025; 
+}
+    form{
+        background: linear-gradient(45deg, #0b0ff7, rgb(104, 6, 99), rgb(8, 181, 212));
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    ul{
+        font-size: 3rem;
+        margin-bottom: 5px;
+            left: 0px;
+            position: relative;
+            background-color: #f4f4f400;
+            padding: 0px;
+            border-radius: 5px;
+            text-align: left;
+            margin-top: 10px;
+        }
+    
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    }
+   
+    </style>
+
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <h1>Cabras</h1>
+    <form id="selectCabrasForm">
+        <ul id="nomesCabrasList"></ul>
+    </form>
+    <button onclick="obterNomesCabrasSelecionadas()">Obter Nomes</button>
+
+    
+    <div id="quantidadeCabrasContainer"></div>
+
+</body>
+
+</html>

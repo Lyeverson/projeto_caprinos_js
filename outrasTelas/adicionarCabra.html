@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+
+@media only screen and (max-width: 767px) {
+
+
+body {
+    background: linear-gradient(45deg, #ff0000, rgb(91, 204, 46), #02cdec);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+h2{
+    color: black;
+}
+
+.bordas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: blue;
+    border-bottom: 5px solid navy; 
+    border-radius: 0 0 60px 60px; 
+}
+
+.cabraCadastro{
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 30%;
+}
+
+img#cabraC{
+    width: 100%;
+    height: 90%;
+}
+
+
+
+.bordasEmbaixo{
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    background-color: blue;
+    border-bottom: 5px solid navy; 
+    border-radius: 60px 60px 0 0; 
+}
+
+.bordas img {
+    max-width: 70%; 
+}
+
+.login-container {
+    text-align: center;
+    padding: 60px;
+    width: 70%; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 14px;
+    background-color: rgb(19, 29, 168);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(19, 29, 168);
+}
+
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+}
+
+
+}
+</style>
+
+
+<div class="cabraCadastro">
+    <img src="imagens/cabra.png" id="cabraC" alt="cabra">
+</div>
+
+<div class="login-container">
+    <h2>cadastro</h2>
+    <form id="cadastroForm">
+        <label for="username">nome:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="idade">idade:</label>
+        <input type="text" id="idade" name="idade" required>
+
+        <label for="idCabra">id:</label> 
+        <input type="text" id="idCabra" name="idCabra" required> 
+
+        <button type="button" onclick="cadastro()">cadastrar</button>
+    </form>
+</div>
+<div id="nomesContainer"></div>
+<script src="script.js"></script>
+</body>
+</html>

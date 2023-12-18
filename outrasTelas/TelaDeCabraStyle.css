@@ -1,0 +1,156 @@
+@media screen and (max-width: 768px) {
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 1.5.rem;
+  }
+  body {
+    background: rgb(150, 148, 148);;
+    background-color: rgb(150, 148, 148);
+  }
+
+
+  button#botao {
+    position: fixed;
+    top: 5%;
+    right: 40px; 
+    padding: 10px 20px;
+    background-color: #2ecc2e00;
+    color: rgba(0, 0, 0, 0); 
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button#volta {
+    position: fixed;
+    left: 5%;
+    right: 40px; 
+    padding: 10px 10px;
+    background-color: transparent;
+    margin-top: -60px;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+  }
+  
+  button#botao::before,
+  button#botao::after {
+    content: " ";
+    display: block;
+    width: 30px; 
+    height: 5px;
+    background: black; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  button#botao::after {
+    transform: translateX(-50%) rotate(90deg); 
+  }
+  
+  
+  
+
+  form {
+    background-color: white;
+    width: 90vw;
+    height: 13vw;
+    margin: auto;
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 3vw;
+  }
+
+  .textoPesquisa {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5rem;
+    bottom: 10px;
+    margin: 0px;
+    cursor: pointer;
+  }
+
+  main {
+    background: linear-gradient(45deg, #1ff70b, rgb(6, 104, 35), rgb(15, 212, 8));
+    padding: 100px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+
+  button#cabras,
+  button#producao,
+  button#rebanho {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    font-size: 2rem;
+    bottom: 10px;
+    margin: 0px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  button#cabras {
+    color: rgb(0, 0, 0);
+    left: 0;
+    bottom: 10px;
+  }
+
+  button#producao {
+    color: rgba(0, 0, 0, 0.557);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10;
+  }
+
+  button#rebanho {
+    color: rgba(0, 0, 0, 0.557);
+    right: 0;
+    bottom: 10;
+  }
+
+  h1#Cabra {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    left: 30;
+    bottom: 100;
+  }
+
+  h2#id {
+    color: white;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    left: 30;
+    bottom: 100;
+  }
+
+.image-container {
+  position: relative;
+}
+
+.pesquisa {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.localImg-container{
+  position: relative;
+}
+
+
+}

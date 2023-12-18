@@ -1,0 +1,189 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>producaoLA</title>
+</head>
+
+<style>
+    * {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 1.5.rem;
+  }
+  body {
+    background-color: rgb(150, 148, 148);
+  }
+
+
+  @media screen and (max-width: 768px) {
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 1.5.rem;
+   
+  }
+  body {
+    background-color: rgb(150, 148, 148);
+  }
+
+
+  button#botao {
+    position: fixed;
+    top: 5%;
+    right: 40px; 
+    padding: 10px 20px;
+    background-color: #2ecc2e00;
+    color: rgba(0, 0, 0, 0); 
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button#botao::before,
+  button#botao::after {
+    content: " ";
+    display: block;
+    width: 30px; 
+    height: 5px;
+    background: black; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  button#botao::after {
+    transform: translateX(-50%) rotate(90deg); 
+  }
+  
+  button#la, button#leite{
+    background-color: aqua;
+    padding: 15%;
+    top: 300px;
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+   height: 20px;
+   line-height: 0px;
+  }
+  button#la{
+    left: 20px;
+    border-radius: 15%;
+  }
+  button#leite{
+  right: 20px;
+  border-radius: 15%;
+  }
+  form {
+    background-color: white;
+    width: 90vw;
+    height: 13vw;
+    margin: auto;
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 3vw;
+  }
+
+  .textoPesquisa {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5rem;
+    bottom: 10px;
+    margin: 0px;
+    cursor: pointer;
+  }
+
+  main {
+    background: linear-gradient(45deg, #1ff70b, rgb(6, 104, 35), rgb(15, 212, 8));
+    padding: 100px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  
+  button#cabras,
+  button#producao,
+  button#rebanho {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    font-size: 2rem;
+    bottom: 10px;
+    margin: 0px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  button#cabras {
+    color: rgb(0, 0, 0);
+    left: 0;
+    bottom: 10px;
+  }
+
+  button#producao {
+    color: rgba(0, 0, 0, 0.557);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10;
+  }
+
+  button#rebanho {
+    color: rgba(0, 0, 0, 0.557);
+    right: 0;
+    bottom: 10;
+  }
+
+  img#botaoLeite{
+    width: 15%;
+    height: 20%;
+    position: absolute;
+   top: 15%;
+    right: 40px;
+    cursor: pointer;
+  }
+  img#botaoLa{
+    width: 20%;
+    height: 25%;
+    position: absolute;
+   top: 15%;
+    left: 40px;
+    cursor: pointer;
+  }
+
+
+}
+  </style>
+<body>
+    <main>
+        <img id="botaoLeite" onclick="paginaLeite()" src="imagens/leite.png" alt="leite">
+        <img id="botaoLa" onclick="paginaLa()" src="imagens/la.png" alt="la">
+
+        <button id="cabras" onclick="paginaDeCabras()"> cabras</button>
+        <button id="producao" onclick="paginaDeProducao()">producao</button>
+        <button id="rebanho" onclick="paginaDeRebanho()">rebanho</button>
+      </main>
+
+
+     
+      <form action="">
+        <input class="textoPesquisa" type="text" placeholder="search..." />
+
+     </form>
+     <button id="leite" onclick="paginaDeProducao()">leite</button>
+     <button id="la" onclick="paginaDeProducaoLa()" >la</button>
+     
+
+
+     <div id="lasContainer"></div>
+<script src="script.js"></script>
+
+</html>

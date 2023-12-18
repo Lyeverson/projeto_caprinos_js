@@ -1,0 +1,205 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>producao</title>
+</head>
+
+<style>
+    * {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 1.5.rem;
+  }
+  body {
+    background-color: rgb(150, 148, 148);
+  }
+
+
+  @media screen and (max-width: 768px) {
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 1.5.rem;
+   
+  }
+  body {
+    background-color: rgb(150, 148, 148);
+  }
+
+
+  button#botao {
+    position: fixed;
+    top: 5%;
+    right: 80px; 
+    padding: 10px 20px;
+    background-color: #2ecc2e00;
+    color: rgba(0, 0, 0, 0); 
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button#botao::before,
+  button#botao::after {
+    content: " ";
+    display: block;
+    width: 30px; 
+    height: 5px;
+    background: black; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  button#botao::after {
+    transform: translateX(-50%) rotate(90deg); 
+  }
+  
+  
+  form {
+    background-color: white;
+    width: 90vw;
+    height: 13vw;
+    margin: auto;
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 3vw;
+  }
+
+  .textoPesquisa {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5rem;
+    bottom: 10px;
+    margin: 0px;
+    cursor: pointer;
+  }
+
+  main{
+    background: linear-gradient(45deg, #1ff70b, rgb(6, 104, 35), rgb(15, 212, 8));
+    padding: 100px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+
+
+  button#cabras,
+  button#producao,
+  button#rebanho {
+    top: 150;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    font-size: 2rem;
+    bottom: 10px;
+    margin: 0px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  button#cabras {
+    color: rgb(0, 0, 0);
+    left: 0;
+    bottom: 10px;
+  }
+
+  button#producao {
+    color: rgba(0, 0, 0, 0.557);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10;
+  }
+
+  button#rebanho {
+    color: rgba(0, 0, 0, 0.557);
+    right: 0;
+    bottom: 10;
+  }
+
+  }
+  </style>
+<body>
+  <main>
+    <button id="botao" onclick="paginaTelaRebanho()">+</button>
+
+      <button id="cabras" onclick="paginaDeCabras()"> cabras</button>
+      <button id="producao" onclick="paginaDeProducao()">producao</button>
+      <button id="rebanho" onclick="paginaDeRebanho()">rebanho</button>
+    </main>
+
+    <form action="">
+      <input class="textoPesquisa" type="text" placeholder="search..." />
+    </form>
+    
+
+  <div id="quantidadesCabrasContainer"></div>
+
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        exibirQuantidadeCabras();
+    });
+
+    function exibirQuantidadeCabras() {
+        var quantidadesCabras = JSON.parse(localStorage.getItem("quantidadesCabras")) || [];
+        var container = document.getElementById("quantidadesCabrasContainer");
+
+        container.innerHTML = '';
+
+     
+        quantidadesCabras.forEach(function (quantidade, index) {
+            var divElement = document.createElement("div");
+
+        
+            var imgElement = document.createElement("img");
+            imgElement.src = "imagens/rebanho.png"; 
+            imgElement.alt = "rebanho"; 
+            imgElement.style.width = "100px"; 
+            imgElement.style.height = "100px";
+
+           
+            var textoQuantidade = document.createElement("p");
+            textoQuantidade.textContent =  quantidade + " Cabras";
+
+            
+            divElement.appendChild(imgElement);
+            divElement.appendChild(textoQuantidade);
+
+            
+            divElement.style.background = "linear-gradient(45deg, #b4bd40, rgb(199, 57, 22), rgb(212, 8, 161))";
+            divElement.style.width = "90vw";
+            divElement.style.height = "30vw";
+            divElement.style.padding = "15px";
+            divElement.style.margin = "auto";
+            divElement.style.fontSize = "2rem";
+            divElement.style.borderRadius = "3vw";
+            divElement.style.marginTop = "20px"; 
+            divElement.style.marginBottom = "20px";
+
+            
+            textoQuantidade.style.marginBottom = "30"; 
+            textoQuantidade.style.display = "flex";
+            textoQuantidade.style.alignItems = "center"; 
+            textoQuantidade.style.position = "relative";
+            textoQuantidade.style.right = "-100px";
+            textoQuantidade.style.top = "-60px";
+            
+            container.appendChild(divElement);
+        });
+    }
+</script>
+
+
+</html>

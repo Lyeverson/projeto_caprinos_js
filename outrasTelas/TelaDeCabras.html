@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela De Cabras</title>
+    <link rel="stylesheet" href="TelaDeCabraStyle.css" />
+  </head>
+  <body>
+    <main>
+      <button id="volta" onclick="paginaDeLogin()"><</button>
+      <button id="botao" onclick="redirectToCadastro()">+</button>
+      <button id="cabras" onclick="paginaDeCabras()" > cabras</button>
+      <button id="producao" onclick="paginaDeProducao()">producao</button>
+      <button id="rebanho" onclick="paginaDeRebanho()">rebanho</button>
+    </main>
+    <form action="">
+      <input class="textoPesquisa" type="text" placeholder="search..." />
+      <div class="image-container">
+        <img id="pesquisa" src="imagens/pesquisa.png" alt="" class="pesquisa" />
+      </div>
+    </form>
+
+    <div id="cabrasContainer"></div> 
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
